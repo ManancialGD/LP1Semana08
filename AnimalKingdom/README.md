@@ -1,3 +1,4 @@
+```mermaid
 classDiagram
     class Animal {
         +string Sound()
@@ -27,3 +28,4 @@ classDiagram
     IMammal <|.. Bat
     Animal <|-- Bee
     ICanFly <|.. Bee
+```
