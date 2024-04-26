@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Runtime.CompilerServices;
 
 namespace PlayerManager1 // >>> Change to PlayerManager2 for exercise 4 <<< //
 {
@@ -127,9 +128,9 @@ namespace PlayerManager1 // >>> Change to PlayerManager2 for exercise 4 <<< //
         /// </summary>
         private void ListPlayersWithScoreGreaterThan()
         {
-            // /////////////////// //
-            // COMPLETE ME PLEASE! //
-            // /////////////////// //
+            Console.Write("What score do you want to compare with? ");
+            int score = int.Parse(Console.ReadLine());
+            ListPlayers(GetPlayersWithScoreGreaterThan(score));
         }
 
         /// <summary>
@@ -142,6 +143,7 @@ namespace PlayerManager1 // >>> Change to PlayerManager2 for exercise 4 <<< //
         private IEnumerable<Player> GetPlayersWithScoreGreaterThan(int minScore)
         {
             List<Player> filteredPlayers = new List<Player>();
+
             foreach (Player player in playerList)
             if (player.Score > minScore) filteredPlayers.Add(player);
             return filteredPlayers;
